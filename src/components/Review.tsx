@@ -2,6 +2,7 @@ import { FC } from "react";
 import { ReviewType } from "../types";
 import { Channel } from "./Channel";
 import { Feedback } from "./Feedback";
+import { PublishedAt } from "./PublishedAt";
 import { Score } from "./Score";
 
 export type ReviewProps = {
@@ -15,12 +16,12 @@ export const Review: FC<ReviewProps> = ({ review, ...props }) => {
                 <Score>{review.score}</Score>
                 <Channel channelName={review.channel} />
             </section>
-            <h1>{review.headline}</h1>
-            <h1>{review.comment}</h1>
+            <h2>{review.headline}</h2>
+            <p>{review.comment}</p>
             <Feedback isPositive>{review.positiveFeedback}</Feedback>
             <Feedback>{review.negativeFeedback}</Feedback>
-            <h1>{review.author}</h1>
-            <h1>{review.publishedAt}</h1>
+            <p>{review.author}</p>
+            <PublishedAt date={review.publishedAt}/>
         </article>
     )
 }

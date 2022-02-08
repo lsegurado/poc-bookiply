@@ -1,9 +1,13 @@
-import './App.css';
 import { ReviewsList } from './components/ReviewsList';
 import { useEffect } from 'react';
 import { getReviewsThunk } from './slices/reviewsSlice';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { selectReviewsFilters } from './slices/reviewsFiltersSlice';
+import { Filters } from './components/Filters';
+import { PageSelector } from './components/PageSelector';
+import styles from './App.module.css';
+import { Header } from './components/Header';
+import { ReviewsNumber } from './components/ReviewsNumber';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -15,13 +19,17 @@ function App() {
 
   return (
     <>
-      <header className="App-header">
-        ID: 091021
-        <h1>La Casa de las Flores</h1>
-      </header>
-      <main>
+      <Header className={styles.header} />
+      <main className={styles.main}>
+        <article className={styles.mainHeader}>
+          <ReviewsNumber />
+          <Filters />
+        </article>
         <ReviewsList />
       </main>
+      <footer>
+        <PageSelector />
+      </footer>
     </>
   );
 }

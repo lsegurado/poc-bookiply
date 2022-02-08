@@ -1,0 +1,15 @@
+.fader {
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(23, 55, 83, 0.1) 0%, rgba(4, 21, 35, 0.87) 100%)
+}
+
+.fader, .img {
+    position: absolute;
+    top: 0;
+    height: 564.7px;
+    width: 1440px;
+}
+
+.img {
+    z-index: -2;
+}

@@ -1,0 +1,17 @@
+.main {
+    max-width: 962px;
+    border-radius: 6px 6px 0 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(23, 55, 83, 0.1);
+    padding: 40px 30px;
+}
+
+.main,
+.header {
+    align-self: center;
+}
+
+.mainHeader {
+    display: flex;
+    justify-content: space-between;
+}

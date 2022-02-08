@@ -16,11 +16,18 @@ export abstract class APIHelper {
 
             });
         return fetch(url.toString(), init)
-            .then(response => {
+            .then(async response => {
                 if (!response.ok) {
                     throw new Error(response.statusText)
                 }
-                return response.json() as Promise<T>
+                const lastPage = Number(response.headers.get('Link')?.match(/(?<=_page=)\d+(?=&_limit=+.>; rel="last")/g)?.[0]) ?? 0;
+                const total = Number(response.headers.get('X-Total-Count')) ?? 0;
+                const value: T = await response.json();
+                return {
+                    lastPage,
+                    value,
+                    total
+                }
             })
     }
     protected get<T, P extends ApiParamsType>(input: RequestInfo, params?: P) {

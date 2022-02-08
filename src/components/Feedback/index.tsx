@@ -1,7 +1,7 @@
 import { FC } from "react";
 import thumbUp from '../../assets/thumb-up.svg';
 import thumbDown from '../../assets/thumb-down.svg';
-import './index.css'
+import styles from './feedback.module.css'
 
 type FeedbackProps = {
     isPositive?: boolean;
@@ -18,7 +18,7 @@ const negativeFeedbackProps: JSX.IntrinsicElements['img'] = {
 
 export const Feedback: FC<FeedbackProps> = ({ isPositive, children }) => {
     return children ? (
-        <section className="feedback">
+        <section className={styles.feedback}>
             <img {...(isPositive ? positiveFeedbackProps : negativeFeedbackProps)} />
             <p>{children}</p>
         </section>

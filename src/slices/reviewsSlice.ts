@@ -6,11 +6,15 @@ import { GetReviewsParamsType, ReviewType } from '../types';
 export interface ReviewsState {
   reviews: ReviewType[];
   status: 'idle' | 'loading' | 'failed';
+  lastPage: number | null,
+  total: number | null
 }
 
 const initialState: ReviewsState = {
   reviews: [],
   status: 'idle',
+  lastPage: null,
+  total: null
 };
 
 const reviewsAPI = new ReviewsAPI();
@@ -25,17 +29,7 @@ export const getReviewsThunk = createAsyncThunk(
 export const reviewsSlice = createSlice({
   name: 'reviews',
   initialState,
-  reducers: {
-    // increment: (state) => {
-    //   state.value += 1;
-    // },
-    // decrement: (state) => {
-    //   state.value -= 1;
-    // },
-    // incrementByAmount: (state, action: PayloadAction<number>) => {
-    //   state.value += action.payload;
-    // },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getReviewsThunk.pending, (state) => {
@@ -43,23 +37,15 @@ export const reviewsSlice = createSlice({
       })
       .addCase(getReviewsThunk.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.reviews = action.payload;
+        state.reviews = action.payload.value;
+        state.lastPage = action.payload.lastPage;
+        state.total = action.payload.total;
       });
   },
 });
 
 export const selectReviews = (state: RootState) => state.reviews.reviews;
-
-// export const selectCount = (state: RootState) => state.counter.value;
-
-// export const incrementIfOdd = (amount: number): AppThunk => (
-//   dispatch,
-//   getState
-// ) => {
-//   const currentValue = selectCount(getState());
-//   if (currentValue % 2 === 1) {
-//     dispatch(incrementByAmount(amount));
-//   }
-// };
+export const selectLastPage = (state: RootState) => state.reviews.lastPage;
+export const selectTotal = (state: RootState) => state.reviews.total;
 
 export default reviewsSlice.reducer;

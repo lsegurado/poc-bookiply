@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'u2800';
+  src: local('u2800'), url(./assets/fonts/u2800.woff) format('truetype');
+}
+
+#root {
+  font-family: "SF Pro Display";
+  display: flex;
+  flex-direction: column;
+}
