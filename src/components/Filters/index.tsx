@@ -5,7 +5,7 @@ import { ScoreFilter } from "../ScoreFilter";
 import styles from './filters.module.css'
 
 export const Filters: FC = () => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)

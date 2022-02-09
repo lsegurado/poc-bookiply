@@ -1,6 +1,7 @@
 .main {
     margin-bottom: 20px;
     padding: 40px 30px;
+    min-height: 400px;
 }
 
 .main,
@@ -8,7 +9,6 @@
     border-radius: 6px 6px 0 0;
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(23, 55, 83, 0.1);
-    max-width: 962px;
 }
 
 .footer {
@@ -18,18 +18,28 @@
     justify-content: center;
 }
 
-@media (min-width: 962px) {
-    .footer,
-    .main {
-        min-width: 962px;
-    }
-}
-
 .footer,
 .main,
 .header {
     box-sizing: border-box;
     align-self: center;
+    max-width: 962px;
+    min-width: 100%;
+}
+
+.header {
+    height: 172px;
+    color: white;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+@media (min-width: 962px) {
+    .header,
+    .footer,
+    .main {
+        min-width: 962px;
+    }
 }
 
 .mainHeader {
