@@ -1,6 +1,8 @@
 .fader {
     z-index: -1;
-    background: linear-gradient(180deg, rgba(23, 55, 83, 0.1) 0%, rgba(4, 21, 35, 0.87) 100%)
+    background: linear-gradient(180deg, rgba(23, 55, 83, 0.1) 0%, rgba(4, 21, 35, 0.87) 100%);
+    top: 0;
+    height: 564.7px;
 }
 
 .fader, .img {
@@ -13,14 +15,6 @@
     --offset: -200px;
     top: var(--offset);
     height: calc(564.7px - var(--offset));
-}
-
-.fader {
-    top: 0;
-    height: 564.7px;
-}
-
-.img {
     z-index: -2;
 }
 
