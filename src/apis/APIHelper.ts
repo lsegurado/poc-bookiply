@@ -20,11 +20,9 @@ export abstract class APIHelper {
                 if (!response.ok) {
                     throw new Error(response.statusText)
                 }
-                const lastPage = Number(response.headers.get('Link')?.match(/(?<=_page=)\d+(?=&_limit=+.>; rel="last")/g)?.[0]) ?? 0;
                 const total = Number(response.headers.get('X-Total-Count')) ?? 0;
                 const value: T = await response.json();
                 return {
-                    lastPage,
                     value,
                     total
                 }

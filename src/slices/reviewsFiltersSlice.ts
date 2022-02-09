@@ -31,5 +31,6 @@ export const reviewsFiltersSlice = createSlice({
 export const { selectChannel, selectScore, goToPage } = reviewsFiltersSlice.actions;
 
 export const selectReviewsFilters = (state: RootState) => state.reviewsFilter;
+export const selectPageSize = (state: RootState) => state.reviewsFilter._limit;
 
 export default reviewsFiltersSlice.reducer;
