@@ -5,14 +5,6 @@ import reviewsReducer, {
 import { mockGetReviewsResponse } from '../__fixtures__/getReviewsResponse';
 import { store } from '../app/store';
 
-jest.mock('../apis/ReviewsAPI', () => ({
-  ReviewsAPI: class {
-    getReviews() {
-      return mockGetReviewsResponse
-    }
-  }
-}));
-
 describe('reviews reducer', () => {
   it('should handle initial state', () => {
     expect(reviewsReducer(undefined, { type: 'unknown' })).toEqual(initialState);
