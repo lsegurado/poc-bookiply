@@ -20,7 +20,7 @@ export abstract class APIHelper {
                 if (!response.ok) {
                     throw new Error(response.statusText)
                 }
-                const total = Number(response.headers.get('X-Total-Count')) ?? 0;
+                const total = Number(response.headers.get('X-Total-Count'));
                 const value: T = await response.json();
                 return {
                     value,

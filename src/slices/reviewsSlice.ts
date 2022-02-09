@@ -9,7 +9,7 @@ export interface ReviewsState {
   total: number | null
 }
 
-const initialState: ReviewsState = {
+export const initialState: ReviewsState = {
   reviews: [],
   status: 'idle',
   total: null
@@ -36,7 +36,7 @@ export const reviewsSlice = createSlice({
       .addCase(getReviewsThunk.fulfilled, (state, action) => {
         state.status = 'idle';
         state.reviews = action.payload.value;
-        state.total = action.payload.total;
+        state.total = action.payload.total !== 0 ? action.payload.total : action.payload.value.length;
       });
   },
 });

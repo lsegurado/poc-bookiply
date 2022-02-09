@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../app/store';
 import { ChannelType, GetReviewsParamsType } from '../types';
 
-const initialState: GetReviewsParamsType = {
+export const initialState: GetReviewsParamsType = {
   _page: 1,
   _limit: 4,
   score: [],
@@ -23,7 +23,7 @@ export const reviewsFiltersSlice = createSlice({
     },
     goToPage: (state, action: PayloadAction<number>) => {
       state._page = action.payload;
-      document.getElementsByTagName('header')[0].scrollIntoView();
+      document.getElementsByTagName('header')[0]?.scrollIntoView();
     },
   }
 });
