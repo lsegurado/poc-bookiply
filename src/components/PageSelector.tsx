@@ -14,7 +14,6 @@ export const PageSelector: FC = () => {
     const lastPage = total && pageSize ? Math.ceil(total / pageSize) : 1;
 
     const handleChange = (_event: React.MouseEvent<HTMLElement, MouseEvent>, pageNumber: number) => {
-        // TODO: scroll to top?
         dispatch(goToPage(pageNumber))
     }
 

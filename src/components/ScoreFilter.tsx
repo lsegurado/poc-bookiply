@@ -1,11 +1,27 @@
+import styled from "@emotion/styled";
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Radio, Rating } from "@mui/material";
 import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { selectReviewsFilters, selectScore } from "../../slices/reviewsFiltersSlice";
-import { countTo } from "../../utils/countTo";
-import styles from './scoreFilter.module.css'
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { selectReviewsFilters, selectScore } from "../slices/reviewsFiltersSlice";
+import { countTo } from "../utils/countTo";
 
-const scores = [4.5, 4.0, 3.5, 3.0]
+const scores = [4.5, 4.0, 3.5, 3.0];
+
+const StarsText = styled.span({
+    fontWeight: 400,
+    fontSize: '1rem'
+})
+const StyledRating = styled(Rating)({
+    verticalAlign: 'bottom'
+})
+
+const sharedStyles = {
+    paddingLeft: '30px',
+    paddingRight: '30px',
+    margin: '0 -24px',
+}
+const StyledListItemButton = styled(ListItemButton)(sharedStyles)
+const StyledListSubheader = styled(ListSubheader)(sharedStyles)
 
 export const ScoreFilter: FC = () => {
     const filters = useAppSelector(selectReviewsFilters);
@@ -23,7 +39,7 @@ export const ScoreFilter: FC = () => {
         <List
             sx={{ width: '100%' }}
             disablePadding
-            subheader={<ListSubheader className={styles.item}>Score</ListSubheader>}
+            subheader={<StyledListSubheader>Score</StyledListSubheader>}
         >
             {scores.map((score) => {
                 const labelId = `label-${score}`
@@ -32,7 +48,7 @@ export const ScoreFilter: FC = () => {
                         key={score}
                         disablePadding
                     >
-                        <ListItemButton className={styles.item} onClick={() => handleChange(score)}>
+                        <StyledListItemButton onClick={() => handleChange(score)}>
                             <ListItemIcon>
                                 <Radio
                                     edge="start"
@@ -44,12 +60,12 @@ export const ScoreFilter: FC = () => {
                             </ListItemIcon>
                             <ListItemText id={labelId}
                                 primary={
-                                    <span className={styles.starsText}>
-                                        {score.toFixed(1)} <Rating className={styles.rating} defaultValue={score} precision={0.5} readOnly /> and more
-                                    </span>
+                                    <StarsText>
+                                        {score.toFixed(1)} <StyledRating defaultValue={score} precision={0.5} readOnly /> and more
+                                    </StarsText>
                                 }
                             />
-                        </ListItemButton>
+                        </StyledListItemButton>
                     </ListItem>
                 );
             })}

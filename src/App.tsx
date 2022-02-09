@@ -25,7 +25,7 @@ function App() {
           <ReviewsNumber />
           <Filters />
         </article>
-        <ReviewsList className={styles.reviews} />
+        <ReviewsList />
       </main>
       <footer className={styles.footer}>
         <PageSelector />

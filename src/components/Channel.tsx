@@ -5,9 +5,8 @@ import BOOKINGCOM from '../assets/BOOKINGCOM.svg';
 import HOLIDU from '../assets/HOLIDU.svg';
 
 export type ChannelProps = {
-    // TODO: Change this
     channelName: ChannelType,
-}
+} & JSX.IntrinsicElements['img']
 
 const channelImg = {
     AIRBNB,
@@ -15,9 +14,9 @@ const channelImg = {
     HOLIDU
 }
 
-export const Channel: FC<ChannelProps> = ({ channelName }) => {
+export const Channel: FC<ChannelProps> = ({ channelName, ...props }) => {
 
     return (
-        <img src={channelImg[channelName]} alt={channelName} />
+        <img {...props} src={channelImg[channelName]} alt={channelName} />
     )
 }

@@ -1,5 +1,5 @@
 .main {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 40px 30px;
     min-height: 400px;
 }
@@ -13,7 +13,7 @@
 
 .footer {
     padding: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
     display: inline-flex;
     justify-content: center;
 }
@@ -46,8 +46,5 @@
     display: flex;
     justify-content: space-between;
     align-items: self-end;
-}
-
-.reviews {
-    margin-top: 40px;
+    margin-bottom: 40px;
 }

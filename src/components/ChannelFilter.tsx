@@ -1,11 +1,16 @@
-import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent, styled } from "@mui/material";
 import { CommonProps } from "@mui/material/OverridableComponent";
 import { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { selectChannel, selectReviewsFilters } from "../slices/reviewsFiltersSlice";
 import { ChannelType } from "../types";
+import { Channel } from "./Channel";
 
-const channels: ChannelType[] = ['AIRBNB', 'BOOKINGCOM', 'HOLIDU']
+const channels: ChannelType[] = ['AIRBNB', 'BOOKINGCOM', 'HOLIDU'];
+
+const StyledChannel = styled(Channel)({
+    marginRight: '10px'
+})
 
 export const ChannelFilter: FC<CommonProps> = (props) => {
     const filters = useAppSelector(selectReviewsFilters);
@@ -28,15 +33,18 @@ export const ChannelFilter: FC<CommonProps> = (props) => {
                 multiple
                 value={filters.channel}
                 onChange={handleChange}
+                renderValue={(channels) => channels.map(channelName => <StyledChannel key={channelName} channelName={channelName} />)}
                 input={<OutlinedInput label="channel" />}
             >
                 {channels.map((name) => (
                     <MenuItem
                         key={name}
                         value={name}
+                        sx={{
+                            height: '50px'
+                        }}
                     >
-                        {/* TODO: Change */}
-                        {name}
+                        <Channel channelName={name} />
                     </MenuItem>
                 ))}
             </Select>
