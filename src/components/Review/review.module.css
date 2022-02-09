@@ -1,0 +1,38 @@
+.reviewSection {
+    display: inline-flex;
+    align-items: center;
+}
+
+.headline {
+    font-weight: bold;
+}
+
+.headline,
+.comment,
+.feedback {
+    margin: 16px 0 0 0;
+}
+
+.article {
+    color: #173753;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-bottom: 56px;
+}
+
+.reviewedAt, 
+.author {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.author {
+    margin: 14px 0 0 0;
+    font-weight: bold;
+}
+
+.reviewedAt {
+    margin: 4px 0 0 0;
+    color: #5B7186;
+}
