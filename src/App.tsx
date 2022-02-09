@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getReviewsThunk(filters))
-  }, [filters])
+  }, [filters, dispatch])
 
   return (
     <>
