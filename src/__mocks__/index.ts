@@ -1,1 +1,2 @@
-import './ReviewsAPI'
+import './ReviewsAPI';
+import './hooks';

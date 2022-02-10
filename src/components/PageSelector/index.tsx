@@ -1,9 +1,9 @@
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { goToPage, selectReviewsFilters, selectPageSize } from "../slices/reviewsFiltersSlice";
-import { selectTotal } from "../slices/reviewsSlice";
-import { countTo } from "../utils/countTo";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { goToPage, selectReviewsFilters, selectPageSize } from "../../slices/reviewsFiltersSlice";
+import { selectTotal } from "../../slices/reviewsSlice";
+import { countTo } from "../../utils/countTo";
 
 export const PageSelector: FC = () => {
     const total = useAppSelector(selectTotal);
@@ -14,7 +14,8 @@ export const PageSelector: FC = () => {
     const lastPage = total && pageSize ? Math.ceil(total / pageSize) : 1;
 
     const handleChange = (_event: React.MouseEvent<HTMLElement, MouseEvent>, pageNumber: number) => {
-        dispatch(goToPage(pageNumber))
+        if (pageNumber)
+            dispatch(goToPage(pageNumber))
     }
 
     return (

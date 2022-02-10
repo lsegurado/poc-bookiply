@@ -18,7 +18,9 @@ describe('reviews reducer', () => {
       status: 'loading'
     });
     await new Promise(process.nextTick);
-    expect(store.getState().reviews).toEqual({
+    const state = store.getState().reviews;
+    const reviewsWithoudIds = state.reviews.map(({id, ...review}) => review);
+    expect({...state, reviews: reviewsWithoudIds}).toEqual({
       reviews: mockGetReviewsResponse.value,
       total: mockGetReviewsResponse.total,
       status: 'idle'

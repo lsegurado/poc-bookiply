@@ -34,6 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "coverage": "npm run test -- --coverage --watchAll",
     "eject": "react-scripts eject",
     "lint": "eslint . --cache --fix --ext .tsx,.ts && npx stylelint **/*.css --fix"
   },

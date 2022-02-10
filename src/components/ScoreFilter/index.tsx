@@ -1,11 +1,12 @@
 import styled from "@emotion/styled";
 import { List, ListItem, ListItemButton, ListItemIcon, ListItemText, ListSubheader, Radio, Rating } from "@mui/material";
 import { FC } from "react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { selectReviewsFilters, selectScore } from "../slices/reviewsFiltersSlice";
-import { countTo } from "../utils/countTo";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { selectReviewsFilters, selectScore } from "../../slices/reviewsFiltersSlice";
+import { countTo } from "../../utils/countTo";
+import { filterOptionsByScore } from "../../constants/filterOptionsByScore";
 
-const scores = [4.5, 4.0, 3.5, 3.0];
+const { availableScoringFilters, maximumScore, filterAccuracy } = filterOptionsByScore;
 
 const StarsText = styled.span({
     fontWeight: 400,
@@ -30,7 +31,7 @@ export const ScoreFilter: FC = () => {
     const handleChange = (value: number) => {
         dispatch(
             selectScore(
-                countTo(value, 5, 0.1)
+                countTo(value, maximumScore, filterAccuracy)
             )
         )
     }
@@ -41,7 +42,7 @@ export const ScoreFilter: FC = () => {
             disablePadding
             subheader={<StyledListSubheader>Score</StyledListSubheader>}
         >
-            {scores.map((score) => {
+            {availableScoringFilters.map((score) => {
                 const labelId = `label-${score}`
                 return (
                     <ListItem
