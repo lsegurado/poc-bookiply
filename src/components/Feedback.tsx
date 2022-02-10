@@ -1,7 +1,6 @@
 import { FC } from "react";
-import thumbUp from '../assets/thumb-up.svg';
-import thumbDown from '../assets/thumb-down.svg';
 import styled from "@emotion/styled";
+import { feedbackImages } from "../constants/feedbackImages";
 
 type FeedbackProps = {
     isPositive?: boolean;
@@ -9,11 +8,11 @@ type FeedbackProps = {
 
 const positiveFeedbackProps: JSX.IntrinsicElements['img'] = {
     alt: 'Positive feedback',
-    src: thumbUp
+    src: feedbackImages.thumbUp
 }
 const negativeFeedbackProps: JSX.IntrinsicElements['img'] = {
     alt: 'Negative feedback',
-    src: thumbDown
+    src: feedbackImages.thumbDown
 }
 
 const FeedbackImg = styled.img({

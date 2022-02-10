@@ -1,11 +1,10 @@
 import { FC } from "react";
+import { formatDateToParts } from "../utils/formatDateToParts";
 
 export const PublishedAt: FC<{ date: string }> = ({ date }) => {
-    const parsedDate = new Date(date);
-
-    const [month, , day, , year] = Intl.DateTimeFormat('en', { day: 'numeric', month: 'long', year: 'numeric' }).formatToParts(parsedDate);
+    const { day, month, year } = formatDateToParts(date);
 
     return <span>
-        Reviewed {day.value} {month.value} {year.value}
+        Reviewed {day} {month} {year}
     </span>
 }

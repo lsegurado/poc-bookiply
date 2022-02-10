@@ -1,15 +1,14 @@
 import { FC } from "react";
-import background from '../../assets/background.png';
+import { property } from "../../constants/property";
 import styles from './header.module.css';
 
 export const Header: FC<JSX.IntrinsicElements['header']> = (props) => {
-    const propertyName = 'La Casa de las Flores';
-    const propertyId = '091021';
+    const { name, id, background } = property;
     return (
         <header {...props}>
-            <p className={styles.id}>ID: {propertyId}</p>
-            <h1 className={styles.title}>{propertyName}</h1>
-            <img className={styles.img} src={background} alt={propertyName} />
+            <p className={styles.id}>ID: {id}</p>
+            <h1 className={styles.title}>{name}</h1>
+            <img className={styles.img} src={background} alt={name} />
             <div className={styles.fader} />
         </header>
     )

@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { ReviewsAPI } from '../apis/ReviewsAPI';
 import { RootState } from '../app/store';
 import { GetReviewsParamsType, ReviewType } from '../types';
+import { nanoid } from 'nanoid';
 
 export interface ReviewsState {
   reviews: ReviewType[];
@@ -35,7 +36,7 @@ export const reviewsSlice = createSlice({
       })
       .addCase(getReviewsThunk.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.reviews = action.payload.value;
+        state.reviews = action.payload.value.map(review => ({ ...review, id: nanoid() }));
         state.total = action.payload.total !== 0 ? action.payload.total : action.payload.value.length;
       });
   },

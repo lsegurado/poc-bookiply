@@ -2,11 +2,10 @@ import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeE
 import { CommonProps } from "@mui/material/OverridableComponent";
 import { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { channels } from "../constants/channels";
 import { selectChannel, selectReviewsFilters } from "../slices/reviewsFiltersSlice";
 import { ChannelType } from "../types";
 import { Channel } from "./Channel";
-
-const channels: ChannelType[] = ['AIRBNB', 'BOOKINGCOM', 'HOLIDU'];
 
 const StyledChannel = styled(Channel)({
     marginRight: '10px'

@@ -11,14 +11,17 @@ describe('reviews reducer', () => {
   });
 
   it('should handle get reviews', async () => {
-    expect(store.getState().reviews.reviews).toEqual(initialState.reviews);
-    expect(store.getState().reviews.total).toEqual(initialState.total);
-    expect(store.getState().reviews.status).toEqual('idle');
+    expect(store.getState().reviews).toEqual(initialState);
     store.dispatch(getReviewsThunk());
-    expect(store.getState().reviews.status).toEqual('loading');
+    expect(store.getState().reviews).toEqual({
+      ...initialState,
+      status: 'loading'
+    });
     await new Promise(process.nextTick);
-    expect(store.getState().reviews.reviews).toEqual(mockGetReviewsResponse.value);
-    expect(store.getState().reviews.total).toEqual(mockGetReviewsResponse.total);
-    expect(store.getState().reviews.status).toEqual('idle');
+    expect(store.getState().reviews).toEqual({
+      reviews: mockGetReviewsResponse.value,
+      total: mockGetReviewsResponse.total,
+      status: 'idle'
+    });
   });
 });
