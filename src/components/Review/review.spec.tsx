@@ -22,6 +22,9 @@ describe('Review component', () => {
     beforeEach(() => {
         el = render(<Review review={review} />);
     })
+    it(`should match snapshot`, () => {
+        expect(el).toMatchSnapshot();
+    })
     it(`should render a score`, () => {
         expect(el.getByText(`${score.toFixed(1)} / 5`)).toBeDefined();
     })

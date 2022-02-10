@@ -4,7 +4,7 @@ import { Channel } from "../Channel";
 import { Feedback } from "../Feedback";
 import { PublishedAt } from "../PublishedAt";
 import { Score } from "../Score";
-import styles from './review.module.css'
+import styles from './Review.module.css'
 
 export type ReviewProps = {
     review: ReviewType,

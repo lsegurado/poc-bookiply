@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { useAppSelector } from "../app/hooks";
-import { selectReviews } from "../slices/reviewsSlice";
-import { Review } from "./Review";
+import { useAppSelector } from "../../app/hooks";
+import { selectReviews } from "../../slices/reviewsSlice";
+import { Review } from "../Review";
 
 export const ReviewsList: FC = () => {
     const reviews = useAppSelector(selectReviews);

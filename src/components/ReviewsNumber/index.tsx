@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { useAppSelector } from "../app/hooks";
-import { selectTotal } from "../slices/reviewsSlice";
+import { useAppSelector } from "../../app/hooks";
+import { selectTotal } from "../../slices/reviewsSlice";
 
 const ReviewsNumberHeadingText = styled.h1({
     margin: 0,
