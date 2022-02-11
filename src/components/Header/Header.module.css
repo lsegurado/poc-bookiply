@@ -40,14 +40,8 @@
 .title {
   line-height: 22px;
   text-shadow: 0 2px 2px rgb(23 55 83 / 15%);
+  margin-left: 30px;
 }
-
-/* @media (max-width: 500px) {
-  .img {
-    top: 0;
-    height: auto;
-  }
-} */
 
 @media (min-width: 1444px) {
   .fader,
@@ -67,9 +61,10 @@
   }
 }
 
-@media (max-width: 962px) {
+
+@media (min-width: 1144.66px) {
   .id,
   .title {
-    margin-left: 30px;
+    margin-left: 0;
   }
 }
