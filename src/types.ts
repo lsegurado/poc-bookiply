@@ -34,5 +34,5 @@ export type GetReviewsParamsType = Partial<{
 /**The review returned from the back-end */
 export type GetReviewsResponseType = Omit<ReviewType, 'id'>
 
-/**Parameters that can be sent to the api */
+/**Parameters that can be sent to the API */
 export type ApiParamsType = Record<string, undefined | number | string | (number | string)[]>

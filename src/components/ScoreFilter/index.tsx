@@ -25,6 +25,9 @@ const sharedStyles = {
 const StyledListItemButton = styled(ListItemButton)(sharedStyles)
 const StyledListSubheader = styled(ListSubheader)(sharedStyles)
 
+/**
+ * A component that allows you to filter by the review score
+ */
 export const ScoreFilter: FC = () => {
     const filters = useAppSelector(selectReviewsFilters);
     const dispatch = useAppDispatch();

@@ -10,6 +10,9 @@ const ReviewsNumberHeadingText = styled.h1({
     lineHeight: '45px',
 })
 
+/**
+ * A component that shows the total reviews
+ */
 export const ReviewsNumber = () => {
     const total = useAppSelector(selectTotal);
 

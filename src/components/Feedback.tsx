@@ -22,6 +22,7 @@ const FeedbackImg = styled.img<Pick<FeedbackProps, 'isPositive'>>(props => ({
     verticalAlign: 'text-bottom',
 }))
 
+/**A component that displays feedback from a review */
 export const Feedback: FC<FeedbackProps> = ({ isPositive, children, className, ...props }) => {
     return children ? (
         <p {...props}><FeedbackImg {...(isPositive ? positiveFeedbackProps : negativeFeedbackProps)} />{children}</p>

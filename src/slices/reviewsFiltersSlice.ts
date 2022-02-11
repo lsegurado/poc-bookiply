@@ -9,6 +9,9 @@ export const initialState: GetReviewsParamsType = {
   channel: []
 };
 
+/**
+ * A slice of the filters used to get reviews from the API
+ */
 export const reviewsFiltersSlice = createSlice({
   name: 'reviewsFilters',
   initialState,

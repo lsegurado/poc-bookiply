@@ -3,7 +3,7 @@ import { APIHelper } from "./APIHelper";
 
 
 /**
- * A class to access the reviews apis
+ * A class to access the reviews APIs
  */
 export class ReviewsAPI extends APIHelper {
     constructor() {
