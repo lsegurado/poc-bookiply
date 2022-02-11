@@ -2,6 +2,7 @@ import { render, RenderResult } from "@testing-library/react";
 import { Review } from ".";
 import { channelImages } from "../../constants/channelImages";
 import { feedbackImages } from "../../constants/feedbackImages";
+import { filterOptionsByScore } from "../../constants/filterOptionsByScore";
 import { formatDateToParts } from "../../utils/formatDateToParts";
 import { mockReviews } from "../../__fixtures__/reviews";
 
@@ -26,7 +27,7 @@ describe('Review component', () => {
         expect(el).toMatchSnapshot();
     })
     it(`should render a score`, () => {
-        expect(el.getByText(`${score.toFixed(1)} / 5`)).toBeDefined();
+        expect(el.getByText(`${score.toFixed(1)} / ${filterOptionsByScore.maximumScore}`)).toBeDefined();
     })
     it(`should render a channel`, () => {
         expect(el.getAllByRole('img')[0].getAttribute('src')).toBe(channelImages[channel]);

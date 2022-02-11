@@ -39,6 +39,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --cache --fix --ext .tsx,.ts && npx stylelint **/*.css --fix"
   },
+  "jest": {
+    "resetMocks": false
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -2,12 +2,15 @@
   margin-bottom: 10px;
   padding: 40px 30px;
   min-height: 400px;
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--secondary-color);
 }
 
 .main,
 .footer {
   border-radius: 6px 6px 0 0;
-  background-color: #fff;
+  background-color: var(--secondary-background);
   box-shadow: 0 2px 4px 0 rgb(23 55 83 / 10%);
 }
 

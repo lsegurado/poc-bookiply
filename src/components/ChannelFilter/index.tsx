@@ -10,7 +10,9 @@ import { Channel } from "../Channel";
 const StyledChannel = styled(Channel)({
     marginRight: '10px'
 })
-
+/**
+ * A component that allows you to filter by the review channel
+ */
 export const ChannelFilter: FC<CommonProps> = (props) => {
     const filters = useAppSelector(selectReviewsFilters);
     const dispatch = useAppDispatch();

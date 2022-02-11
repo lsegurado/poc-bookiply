@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ReviewType } from "../../types";
+import { GetReviewsResponseType } from "../../types";
 import { Channel } from "../Channel";
 import { Feedback } from "../Feedback";
 import { PublishedAt } from "../PublishedAt";
@@ -7,9 +7,12 @@ import { Score } from "../Score";
 import styles from './Review.module.css'
 
 export type ReviewProps = {
-    review: ReviewType,
+    review: GetReviewsResponseType,
 }
 
+/**
+ * A component that displays the data of a review
+ */
 export const Review: FC<ReviewProps> = ({ review, ...props }) => {
     return (
         <article className={styles.article} {...props}>
@@ -22,7 +25,7 @@ export const Review: FC<ReviewProps> = ({ review, ...props }) => {
             <Feedback className={styles.feedback} isPositive>{review.positiveFeedback}</Feedback>
             <Feedback className={styles.feedback}>{review.negativeFeedback}</Feedback>
             <p className={styles.author}>{review.author}</p>
-            <PublishedAt date={review.publishedAt}/>
+            <PublishedAt className={styles.publishedAt} date={review.publishedAt}/>
         </article>
     )
 }

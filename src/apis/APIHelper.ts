@@ -28,6 +28,12 @@ export abstract class APIHelper {
                 }
             })
     }
+    /**
+     * A strongly typed get fetch call
+     * @param input The url of the api 
+     * @param params Parameters to send
+     * @returns A promise with the value and the total amount (from the header)
+     */
     protected get<T, P extends ApiParamsType>(input: RequestInfo, params?: P) {
         return this.fetch<T, P>(input, params, { method: 'GET' });
     }

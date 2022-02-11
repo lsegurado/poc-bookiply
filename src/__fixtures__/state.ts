@@ -1,12 +1,32 @@
 import { RootState } from "../app/store";
-import { initialState } from "../slices/reviewsFiltersSlice";
+import { initialState as initialStateReviews } from "../slices/reviewsSlice";
+import { initialState as initialStateReviewsFilters } from "../slices/reviewsFiltersSlice";
 import { mockReviews } from "./reviews";
 
-export const mockState: RootState = {
+export const idleState: RootState = {
     reviews: {
         reviews: mockReviews,
         status: 'idle',
         total: mockReviews.length
     },
-    reviewsFilter: initialState
+    reviewsFilter: initialStateReviewsFilters
 }
+export const loadingState: RootState = {
+    reviews: {
+        ...initialStateReviews,
+        status: 'loading'
+    },
+    reviewsFilter: initialStateReviewsFilters
+}
+export const failedState: RootState = {
+    reviews: {
+        ...initialStateReviews,
+        status: 'failed'
+    },
+    reviewsFilter: initialStateReviewsFilters
+}
+export const idleWithNoResultsState: RootState = {
+    reviews: initialStateReviews,
+    reviewsFilter: initialStateReviewsFilters
+}
+export const mockState = jest.fn(() => idleState)

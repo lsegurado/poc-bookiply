@@ -2,6 +2,9 @@ import { FC } from "react";
 import { property } from "../../constants/property";
 import styles from './Header.module.css';
 
+/**
+ * A component that contains the application header
+ */
 export const Header: FC<JSX.IntrinsicElements['header']> = (props) => {
     const { name, id, background } = property;
     return (

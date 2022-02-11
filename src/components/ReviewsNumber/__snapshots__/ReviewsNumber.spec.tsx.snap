@@ -6,19 +6,19 @@ Object {
   "baseElement": <body>
     <div>
       <h1
-        class="css-1tc5g8q"
+        class="css-1s8sb3e"
       >
-        30
-         Reviews
+        30 Reviews
+         
       </h1>
     </div>
   </body>,
   "container": <div>
     <h1
-      class="css-1tc5g8q"
+      class="css-1s8sb3e"
     >
-      30
-       Reviews
+      30 Reviews
+       
     </h1>
   </div>,
   "debug": [Function],

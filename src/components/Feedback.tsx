@@ -6,19 +6,21 @@ type FeedbackProps = {
     isPositive?: boolean;
 } & JSX.IntrinsicElements['p']
 
-const positiveFeedbackProps: JSX.IntrinsicElements['img'] = {
+const positiveFeedbackProps: JSX.IntrinsicElements['img'] & Pick<FeedbackProps, 'isPositive'> = {
     alt: 'Positive feedback',
-    src: feedbackImages.thumbUp
+    src: feedbackImages.thumbUp,
+    isPositive: true,
 }
-const negativeFeedbackProps: JSX.IntrinsicElements['img'] = {
+const negativeFeedbackProps: JSX.IntrinsicElements['img'] & Pick<FeedbackProps, 'isPositive'> = {
     alt: 'Negative feedback',
-    src: feedbackImages.thumbDown
+    src: feedbackImages.thumbDown,
+    isPositive: false,
 }
 
-const FeedbackImg = styled.img({
-    marginRight: '10px',
-    verticalAlign: 'text-bottom'
-})
+const FeedbackImg = styled.img<Pick<FeedbackProps, 'isPositive'>>(props => ({
+    marginRight: props.isPositive ? '10px': '12px',
+    verticalAlign: 'text-bottom',
+}))
 
 export const Feedback: FC<FeedbackProps> = ({ isPositive, children, className, ...props }) => {
     return children ? (

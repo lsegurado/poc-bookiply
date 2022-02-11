@@ -23,7 +23,6 @@ export const reviewsFiltersSlice = createSlice({
     },
     goToPage: (state, action: PayloadAction<number>) => {
       state._page = action.payload;
-      document.getElementsByTagName('header')[0]?.scrollIntoView();
     },
   }
 });

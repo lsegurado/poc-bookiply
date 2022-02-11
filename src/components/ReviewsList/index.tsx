@@ -1,14 +1,23 @@
+import { Box, CircularProgress } from "@mui/material";
 import { FC } from "react";
 import { useAppSelector } from "../../app/hooks";
-import { selectReviews } from "../../slices/reviewsSlice";
+import { selectReviews, selectStatus } from "../../slices/reviewsSlice";
 import { Review } from "../Review";
 
+/**
+ * A component that shows all the reviews of the store
+ */
 export const ReviewsList: FC = () => {
     const reviews = useAppSelector(selectReviews);
+    const status = useAppSelector(selectStatus);
 
-    return (
-        <>
-            {reviews.map(review => <Review key={review.id} review={review} />)}
-        </>
-    )
+    switch (status) {
+        case 'idle':
+            if (reviews.length > 0)
+                return <>{reviews.map(review => <Review key={review.id} review={review} />)}</>
+            else
+                return <Box sx={{ margin: 'auto' }} ><p>No results were found with the selected filters.</p></Box>
+        case 'loading': return <Box sx={{ margin: 'auto' }} ><CircularProgress size={90} /></Box>
+        case 'failed': return <Box sx={{ margin: 'auto' }} ><p>An error occurred please try again later.</p></Box>
+    }
 }

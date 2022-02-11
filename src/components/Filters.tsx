@@ -8,6 +8,7 @@ const StyledChannelFilter = styled(ChannelFilter)({
     marginTop: '5px'
 })
 
+/**A component that contains the filters and the logic in which they are displayed */
 export const Filters: FC = () => {
     const [open, setOpen] = useState(false);
 

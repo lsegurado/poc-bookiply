@@ -21,4 +21,5 @@ describe('Score filter component', () => {
             expect(dispatch).toBeCalledWith(selectScore(countTo(score, maximumScore, filterAccuracy)))
         })
     })
+    afterEach(useAppDispatch().mockReset)
 });

@@ -4,7 +4,6 @@ import { selectTotal } from "../../slices/reviewsSlice";
 
 const ReviewsNumberHeadingText = styled.h1({
     margin: 0,
-    color: '#173753',
     fontSize: '34px',
     fontWeight: 'bold',
     letterSpacing: 0,
@@ -14,5 +13,5 @@ const ReviewsNumberHeadingText = styled.h1({
 export const ReviewsNumber = () => {
     const total = useAppSelector(selectTotal);
 
-    return <ReviewsNumberHeadingText>{total} Reviews</ReviewsNumberHeadingText>
+    return <ReviewsNumberHeadingText>{total && total > 0 ? `${total} Reviews`: null} </ReviewsNumberHeadingText>
 }

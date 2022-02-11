@@ -3,36 +3,35 @@
   align-items: center;
 }
 
-.headline {
-  font-weight: bold;
-}
-
 .headline,
 .comment,
 .feedback {
+  font-size: 16px;
   margin: 16px 0 0;
 }
 
 .article {
-  color: #173753;
-  font-size: 16px;
   letter-spacing: 0;
   line-height: 24px;
   margin-bottom: 56px;
 }
 
-.reviewedAt,
+.publishedAt,
 .author {
   font-size: 14px;
   line-height: 18px;
 }
 
+.headline,
 .author {
-  margin: 14px 0 0;
   font-weight: bold;
 }
 
-.reviewedAt {
+.author {
+  margin: 14px 0 0;
+}
+
+.publishedAt {
   margin: 4px 0 0;
-  color: #5b7186;
+  color: var(--tertiary-color);
 }

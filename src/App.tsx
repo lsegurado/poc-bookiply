@@ -4,7 +4,7 @@ import { getReviewsThunk } from './slices/reviewsSlice';
 import { useAppDispatch, useAppSelector } from './app/hooks';
 import { selectReviewsFilters } from './slices/reviewsFiltersSlice';
 import { Filters } from './components/Filters';
-import { PageSelector } from './components/PageSelector';
+import { Footer } from './components/Footer';
 import styles from './App.module.css';
 import { Header } from './components/Header';
 import { ReviewsNumber } from './components/ReviewsNumber';
@@ -14,6 +14,7 @@ function App() {
   const filters = useAppSelector(selectReviewsFilters);
 
   useEffect(() => {
+    // I get the reviews when I mount the component or the filters change
     dispatch(getReviewsThunk(filters))
   }, [filters, dispatch])
 
@@ -27,9 +28,7 @@ function App() {
         </article>
         <ReviewsList />
       </main>
-      <footer className={styles.footer}>
-        <PageSelector />
-      </footer>
+      <Footer className={styles.footer} />
     </>
   );
 }

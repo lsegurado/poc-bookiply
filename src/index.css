@@ -21,3 +21,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+:root {
+  --primary-color: white;
+  --primary-background: #0276DB;
+  --secondary-color: #173753;
+  --secondary-background: white;
+  --tertiary-color: #5b7186;
+}

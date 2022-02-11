@@ -1,21 +1,23 @@
 import styled from "@emotion/styled"
 import { FC } from "react"
+import { filterOptionsByScore } from "../constants/filterOptionsByScore"
 
 const ScoreText = styled.span({
     height: '32px',
     width: '66px',
     borderRadius: '8px',
-    backgroundColor: '#0276DB',
+    backgroundColor: 'var(--primary-background)',
     display: 'inline-flex',
-    color: 'white',
+    color: 'var(--primary-color)',
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: '14px'
 })
 
+/**A component that displays the score in a review */
 export const Score: FC = ({ children }) => {
 
     return (
-        <ScoreText>{children} / 5</ScoreText>
+        <ScoreText>{children} / {filterOptionsByScore.maximumScore}</ScoreText>
     )
 }

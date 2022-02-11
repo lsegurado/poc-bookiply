@@ -2,9 +2,7 @@ import { render, within, RenderResult, fireEvent } from "@testing-library/react"
 import { ChannelFilter } from ".";
 import { useAppDispatch } from "../../app/hooks";
 import { channels } from "../../constants/channels";
-import { goToPage, selectChannel } from "../../slices/reviewsFiltersSlice";
-import { countTo } from "../../utils/countTo";
-import { mockState } from "../../__fixtures__/state";
+import { selectChannel } from "../../slices/reviewsFiltersSlice";
 
 describe('Channel filter component', () => {
     let el: RenderResult;
@@ -22,4 +20,5 @@ describe('Channel filter component', () => {
             expect(dispatch).toBeCalledWith(selectChannel([channel]));
         })
     })
+    afterEach(useAppDispatch().mockReset)
 });

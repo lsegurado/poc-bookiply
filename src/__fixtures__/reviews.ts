@@ -9,7 +9,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.1,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "H5JlM3uFEF5X_ZU1Fn3iR"
     },
     {
         "headline": "Very nice host, and quite chill place.",
@@ -19,7 +20,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "No parking spot.",
         "score": 4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "F4JJQJty9YU5nEp5Xb8gD"
     },
     {
         "headline": "Location is perfect!!",
@@ -29,7 +31,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.1,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "c3OBdkVzDnUMCJLfeTiiV"
     },
     {
         "headline": "Very nice host, and quite chill place.",
@@ -39,7 +42,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "A bit dusty",
         "score": 4,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "T6my_yaJZPHsFilSp9Uuc"
     },
     {
         "headline": "Very nice host, and quite chill place.",
@@ -49,7 +53,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.3,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "-zCML8_Pw0CVABATSZpY5"
     },
     {
         "headline": "Lovely finca",
@@ -59,7 +64,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "Not the most central location.",
         "score": 4.2,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "w6ZmU2DZDJso5YRFalkXN"
     },
     {
         "headline": "Amazing Pool!",
@@ -69,7 +75,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.3,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "xPz18IKGoOvIoRf8JL3eC"
     },
     {
         "headline": "Amazing Stay",
@@ -79,7 +86,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "No parking spot.",
         "score": 4.5,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "Z-QzdHfFygjiPgUITSW4l"
     },
     {
         "headline": "The standard chunk of Lorem Ipsum",
@@ -89,7 +97,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "AC was not working",
         "score": 4.4,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "JEd63hyHnlbkbcALcbW2Q"
     },
     {
         "headline": "The standard chunk of Lorem Ipsum",
@@ -99,7 +108,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "We had to wait for 1h for the check-in.",
         "score": 4.4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "Axrhbze7AX1uI-KkJaWWg"
     },
     {
         "headline": "We had a blast",
@@ -109,7 +119,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "Not the most central location.",
         "score": 4.2,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "3IwkYOXrm9PR3rM8ME9Ye"
     },
     {
         "headline": "Amazing Pool!",
@@ -119,7 +130,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.3,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "5uyYAABQaPwVC7fCmBeG0"
     },
     {
         "headline": "Amazing Stay",
@@ -129,7 +141,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "vGia4yqX1B999O9fISVQC"
     },
     {
         "headline": "Lovely finca",
@@ -139,7 +152,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "Not the most central location.",
         "score": 4.3,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "15HoragWz4I5sYC90CX52"
     },
     {
         "headline": "Very nice host, and quite chill place.",
@@ -149,7 +163,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "We had to wait for 1h for the check-in.",
         "score": 4.4,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "sptTRhW69u9_KFQGdEAo0"
     },
     {
         "headline": "The standard chunk of Lorem Ipsum",
@@ -159,7 +174,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.5,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "Jbxef7j8T-cUE2fT9jN5g"
     },
     {
         "headline": "Amazing Stay",
@@ -169,7 +185,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "AC was not working",
         "score": 4.5,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "nuHTp9Gx0_hxP8oDsEqSM"
     },
     {
         "headline": "Amazing Stay",
@@ -179,7 +196,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "We had to wait for 1h for the check-in.",
         "score": 4.4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "ss8eYKSUdBuDrp07XWEK-"
     },
     {
         "headline": "The standard chunk of Lorem Ipsum",
@@ -189,7 +207,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "AC was not working",
         "score": 4.4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "YxH_fNbVEYExTb3UhinG0"
     },
     {
         "headline": "Amazing Stay",
@@ -199,7 +218,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.5,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "qiZsFAMNzBMw5ANCjnFPW"
     },
     {
         "headline": "Amazing Pool!",
@@ -209,7 +229,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.1,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "st2dzKb6zSejMdsAm87H1"
     },
     {
         "headline": "Location is perfect!!",
@@ -219,7 +240,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "No parking spot.",
         "score": 4.1,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "ea3jm7RNPlr8h7NhfAq5a"
     },
     {
         "headline": "Lovely finca",
@@ -229,7 +251,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "A bit dusty",
         "score": 4.4,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "ArRP9O2HWshpJmVBoOy6d"
     },
     {
         "headline": "Amazing Stay",
@@ -239,7 +262,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.3,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "Q1m93bEwmEuHyjeyPDite"
     },
     {
         "headline": "We had a blast",
@@ -249,7 +273,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "A bit dusty",
         "score": 4.1,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "_96evVZfhKjK6ZLlAQ8-4"
     },
     {
         "headline": "Very nice host, and quite chill place.",
@@ -259,7 +284,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.4,
         "channel": "HOLIDU",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "S-r3ZCyDfZh1uIjHLpg83"
     },
     {
         "headline": "Amazing Stay",
@@ -269,7 +295,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "A bit dusty",
         "score": 4.1,
         "channel": "BOOKINGCOM",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "pYXq_WmTYGhTW4qL_CVb3"
     },
     {
         "headline": "Amazing Pool!",
@@ -279,7 +306,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "No parking spot.",
         "score": 4.4,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "SexsgPkAdOIGcxF4BxMAo"
     },
     {
         "headline": "Lovely finca",
@@ -289,7 +317,8 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": "A bit dusty",
         "score": 4.4,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "JfDtDxK7pFHpg1cW-_tbT"
     },
     {
         "headline": "Amazing Pool!",
@@ -299,6 +328,7 @@ export const mockReviews: ReviewType[] = [
         "negativeFeedback": null,
         "score": 4.1,
         "channel": "AIRBNB",
-        "publishedAt": "2020-08-11T12:20:02.340Z"
+        "publishedAt": "2020-08-11T12:20:02.340Z",
+        "id": "7_qrD4rDCvMeQeBZYKQH-"
     }
 ]

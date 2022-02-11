@@ -6,11 +6,12 @@ import { selectReviewsFilters, selectScore } from "../../slices/reviewsFiltersSl
 import { countTo } from "../../utils/countTo";
 import { filterOptionsByScore } from "../../constants/filterOptionsByScore";
 
-const { availableScoringFilters, maximumScore, filterAccuracy } = filterOptionsByScore;
+const { availableScoringFilters, maximumScore, filterAccuracy, starsPrecision } = filterOptionsByScore;
 
 const StarsText = styled.span({
     fontWeight: 400,
-    fontSize: '1rem'
+    fontSize: '1rem',
+    color: 'var(--secondary-color)'
 })
 const StyledRating = styled(Rating)({
     verticalAlign: 'bottom'
@@ -62,7 +63,7 @@ export const ScoreFilter: FC = () => {
                             <ListItemText id={labelId}
                                 primary={
                                     <StarsText>
-                                        {score.toFixed(1)} <StyledRating defaultValue={score} precision={0.5} readOnly /> and more
+                                        {score.toFixed(1)} <StyledRating defaultValue={score} max={maximumScore} precision={starsPrecision} readOnly /> and more
                                     </StarsText>
                                 }
                             />

@@ -11,6 +11,6 @@ describe('Reviews number component', () => {
         expect(el).toMatchSnapshot();
     })
     it(`should render the correct amount of reviews`, () => {
-        expect(el.getByText(`${mockState.reviews.total} Reviews`)).toBeDefined();
+        expect(el.getByText(`${mockState().reviews.total} Reviews`)).toBeDefined();
     })
 });
