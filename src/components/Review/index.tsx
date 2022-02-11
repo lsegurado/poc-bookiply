@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { memo } from "react";
 import { GetReviewsResponseType } from "../../types";
 import { Channel } from "../Channel";
 import { Feedback } from "../Feedback";
@@ -13,7 +13,7 @@ export type ReviewProps = {
 /**
  * A component that displays the data of a review
  */
-export const Review: FC<ReviewProps> = ({ review, ...props }) => {
+export const Review = memo<ReviewProps>(({ review, ...props }) => {
     return (
         <article className={styles.article} {...props}>
             <section className={styles.reviewSection}>
@@ -28,4 +28,4 @@ export const Review: FC<ReviewProps> = ({ review, ...props }) => {
             <PublishedAt className={styles.publishedAt} date={review.publishedAt}/>
         </article>
     )
-}
+})

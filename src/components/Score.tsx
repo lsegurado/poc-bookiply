@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { FC } from "react"
+import { memo } from "react"
 import { filterOptionsByScore } from "../constants/filterOptionsByScore"
 
 const ScoreText = styled.span({
@@ -15,9 +15,9 @@ const ScoreText = styled.span({
 })
 
 /**A component that displays the score in a review */
-export const Score: FC = ({ children }) => {
+export const Score = memo(({ children }) => {
 
     return (
         <ScoreText>{children} / {filterOptionsByScore.maximumScore}</ScoreText>
     )
-}
+})

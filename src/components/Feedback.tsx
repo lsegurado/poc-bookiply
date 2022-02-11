@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { memo } from "react";
 import styled from "@emotion/styled";
 import { feedbackImages } from "../constants/feedbackImages";
 
@@ -23,8 +23,8 @@ const FeedbackImg = styled.img<Pick<FeedbackProps, 'isPositive'>>(props => ({
 }))
 
 /**A component that displays feedback from a review */
-export const Feedback: FC<FeedbackProps> = ({ isPositive, children, className, ...props }) => {
+export const Feedback = memo<FeedbackProps>(({ isPositive, children, className, ...props }) => {
     return children ? (
         <p {...props}><FeedbackImg {...(isPositive ? positiveFeedbackProps : negativeFeedbackProps)} />{children}</p>
     ) : null
-}
+})

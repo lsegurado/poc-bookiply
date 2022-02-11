@@ -10,6 +10,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 const theme = createTheme({
   palette: {
     primary: {
+      // Material UI does not support css variables on palette
       // --primary-background
       main: '#0276DB'
     },
@@ -22,10 +23,7 @@ const theme = createTheme({
 
   },
   typography: {
-    fontFamily: [
-      'SF Pro Display',
-      'Roboto'
-    ].join(','),
+    fontFamily: 'var(--font-family)',
   },
 });
 
