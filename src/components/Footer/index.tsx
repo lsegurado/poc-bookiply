@@ -31,6 +31,7 @@ export const Footer: FC<JSX.IntrinsicElements['footer']> = (props) => {
                 color="primary"
                 value={filters._page}
                 exclusive
+                size="large"
                 onChange={handleChange}
             >
                 {countTo(1, lastPage, 1).map(pageNumber => <ToggleButton key={pageNumber} value={pageNumber}>{pageNumber}</ToggleButton>)}
