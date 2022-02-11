@@ -45,6 +45,7 @@ export const reviewsSlice = createSlice({
         state.reviews = action.payload.value.map(review => ({ ...review, id: nanoid() }));
         // The backend does not return the total if I do not use pagination
         state.total = action.payload.total !== 0 ? action.payload.total : action.payload.value.length;
+        document.getElementsByTagName('header')[0]?.scrollIntoView()
       });
   },
 });

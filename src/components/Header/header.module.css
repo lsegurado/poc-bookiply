@@ -3,20 +3,22 @@
   background: linear-gradient(180deg, rgb(23 55 83 / 10%) 0%, rgb(4 21 35 / 87%) 100%);
   top: 0;
   height: 564.7px;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
 }
 
 .fader,
 .img {
   position: absolute;
-  width: 100%;
   align-self: center;
+  width: 1144.66px;
 }
 
 .img {
-  --offset: -200px;
-
-  top: var(--offset);
-  height: calc(564.7px - var(--offset));
+  object-fit: cover;
+  top: -56px;
+  height: 564.7px;
   z-index: -2;
 }
 
@@ -40,12 +42,12 @@
   text-shadow: 0 2px 2px rgb(23 55 83 / 15%);
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .img {
     top: 0;
     height: auto;
   }
-}
+} */
 
 @media (min-width: 1444px) {
   .fader,

@@ -26,7 +26,6 @@
 .header {
   box-sizing: border-box;
   align-self: center;
-  max-width: 962px;
   min-width: 100%;
 }
 
@@ -35,13 +34,20 @@
   color: white;
   display: inline-flex;
   flex-direction: column;
+  position: relative;
 }
 
-@media (min-width: 962px) {
+@media (min-width: 1144.66px) {
   .header,
   .footer,
   .main {
+    max-width: 962px;
     min-width: 962px;
+  }
+}
+@media (max-width: 1144.66px) {
+  .header {
+    overflow: hidden;
   }
 }
 
