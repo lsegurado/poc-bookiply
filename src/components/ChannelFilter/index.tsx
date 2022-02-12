@@ -43,10 +43,15 @@ export const ChannelFilter: FC<CommonProps> = (props) => {
                         key={name}
                         value={name}
                         sx={{
-                            height: '50px'
+                            height: '50px',
                         }}
                     >
-                        <Checkbox checked={filters.channel && filters.channel.indexOf(name) > -1} />
+                        <Checkbox
+                            sx={{
+                                marginRight: '10px'
+                            }}
+                            checked={filters.channel && filters.channel.indexOf(name) > -1}
+                        />
                         <Channel channelName={name} />
                     </MenuItem>
                 ))}
