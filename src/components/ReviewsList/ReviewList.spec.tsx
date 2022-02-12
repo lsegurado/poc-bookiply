@@ -1,6 +1,7 @@
-import { render } from "@testing-library/react";
+import { render, RenderResult } from "@testing-library/react";
 import { ReviewsList } from ".";
 import { failedState, idleWithNoResultsState, loadingState, mockState } from "../../__fixtures__/state";
+import noResultsFound from '../../assets/no-results-found.png';
 
 describe('Reviews list component', () => {
     describe('when having > 0 reviews', () => {
@@ -9,7 +10,7 @@ describe('Reviews list component', () => {
         })
     })
     describe('when request failed', () => {
-        beforeAll(() => {
+        beforeEach(() => {
             mockState.mockReturnValue(failedState);
         })
         it(`should render "An error occurred please try again later." message`, () => {
@@ -17,15 +18,20 @@ describe('Reviews list component', () => {
         })
     })
     describe('when having 0 reviews', () => {
-        beforeAll(() => {
+        let el: RenderResult;
+        beforeEach(() => {
             mockState.mockReturnValue(idleWithNoResultsState);
+            el = render(<ReviewsList />);
         })
         it(`should render "No results were found with the selected filters." message`, () => {
-            expect(render(<ReviewsList />).getByText('No results were found with the selected filters.')).toBeDefined();
+            expect(el.getByText('No results were found with the selected filters.')).toBeDefined();
+        })
+        it(`should render a "no results found" image`, () => {
+            expect(el.getByRole('img').getAttribute('src')).toEqual(noResultsFound);
         })
     })
     describe('when loading', () => {
-        beforeAll(() => {
+        beforeEach(() => {
             mockState.mockReturnValue(loadingState);
         })
         it(`should render a loading spinner`, () => {

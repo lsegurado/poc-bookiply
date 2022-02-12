@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent, styled } from "@mui/material";
+import { Checkbox, FormControl, InputLabel, MenuItem, OutlinedInput, Select, SelectChangeEvent, styled } from "@mui/material";
 import { CommonProps } from "@mui/material/OverridableComponent";
 import { FC } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
@@ -34,6 +34,7 @@ export const ChannelFilter: FC<CommonProps> = (props) => {
                 multiple
                 value={filters.channel}
                 onChange={handleChange}
+                variant="standard"
                 renderValue={channels => channels.map(channelName => <StyledChannel key={channelName} channelName={channelName} />)}
                 input={<OutlinedInput label="channel" />}
             >
@@ -45,6 +46,7 @@ export const ChannelFilter: FC<CommonProps> = (props) => {
                             height: '50px'
                         }}
                     >
+                        <Checkbox checked={filters.channel && filters.channel.indexOf(name) > -1} />
                         <Channel channelName={name} />
                     </MenuItem>
                 ))}

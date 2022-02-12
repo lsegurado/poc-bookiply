@@ -4,6 +4,7 @@ import reviewsFiltersReducer, {
   selectChannel,
   selectScore,
   goToPage,
+  resetFilters,
 } from './reviewsFiltersSlice';
 
 describe('reviews filter reducer', () => {
@@ -27,5 +28,10 @@ describe('reviews filter reducer', () => {
     const expectedValue = 2;
     const actual = reviewsFiltersReducer(initialState, goToPage(expectedValue));
     expect(actual._page).toEqual(expectedValue);
+  });
+
+  it('should handle reset filters', () => {
+    const actual = reviewsFiltersReducer({ score: [1], channel: ['AIRBNB'], _page: 3, _limit: 4 }, resetFilters());
+    expect(actual).toEqual(initialState);
   });
 });

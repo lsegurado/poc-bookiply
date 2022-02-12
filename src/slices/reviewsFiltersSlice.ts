@@ -27,10 +27,13 @@ export const reviewsFiltersSlice = createSlice({
     goToPage: (state, action: PayloadAction<number>) => {
       state._page = action.payload;
     },
+    resetFilters: () => {
+      return initialState
+    },
   }
 });
 
-export const { selectChannel, selectScore, goToPage } = reviewsFiltersSlice.actions;
+export const { selectChannel, selectScore, goToPage, resetFilters } = reviewsFiltersSlice.actions;
 
 export const selectReviewsFilters = (state: RootState) => state.reviewsFilter;
 export const selectPageSize = (state: RootState) => state.reviewsFilter._limit;

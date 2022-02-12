@@ -10,7 +10,7 @@ describe('Channel filter component', () => {
         el = render(<ChannelFilter />);
     })
     channels.forEach(channel => {
-        it(`when clicking the ${channel} channel button should dispatch a selectChannel event`, async () => {
+        it(`when clicking the ${channel} channel button should dispatch a selectChannel event`, () => {
             // material-ui's select component uses the mouseDown event to trigger the popover menu to appear.
             fireEvent.mouseDown(el.getByRole('button'));
             const listbox = within(el.getByRole('listbox'));

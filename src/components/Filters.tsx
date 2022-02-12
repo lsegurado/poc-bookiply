@@ -1,6 +1,7 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, styled } from "@mui/material";
 import { FC, useState } from "react";
 import { ChannelFilter } from "./ChannelFilter";
+import { ResetFiltersButton } from "./ResetFiltersButton";
 import { ScoreFilter } from "./ScoreFilter";
 
 const StyledChannelFilter = styled(ChannelFilter)({
@@ -26,7 +27,10 @@ export const Filters: FC = () => {
                     <ScoreFilter />
                 </DialogContent>
                 <DialogActions>
-                    <Button variant="outlined" onClick={handleClose}>
+                    <ResetFiltersButton variant="outlined">
+                        Reset
+                    </ResetFiltersButton>
+                    <Button variant="text" onClick={handleClose}>
                         Close
                     </Button>
                 </DialogActions>
