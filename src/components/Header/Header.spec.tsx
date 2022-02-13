@@ -9,7 +9,7 @@ describe('Header component', () => {
         el = render(<Header />);
     })
     it(`should match snapshot`, () => {
-        expect(el).toMatchSnapshot();
+        expect(el.container).toMatchSnapshot();
     })
     it(`should render a header container`, () => {
         expect(el.getByRole('banner').tagName).toEqual('HEADER');

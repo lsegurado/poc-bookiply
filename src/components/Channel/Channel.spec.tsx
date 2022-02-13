@@ -11,7 +11,7 @@ describe('Channel component', () => {
                 el = render(<Channel channelName={channel as ChannelType} />);
             })
             it('should match snapshot', () => {
-                expect(el).toMatchSnapshot();
+                expect(el.container).toMatchSnapshot();
             })
             it(`should render ${channel} channel image`, () => {
                 expect(el.getByRole('img').getAttribute('src')).toEqual(imageURL);

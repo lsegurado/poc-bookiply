@@ -24,7 +24,7 @@ describe('Review component', () => {
         el = render(<Review review={review} />);
     })
     it(`should match snapshot`, () => {
-        expect(el).toMatchSnapshot();
+        expect(el.container).toMatchSnapshot();
     })
     it(`should render a score`, () => {
         expect(el.getByText(`${score.toFixed(1)} / ${filterOptionsByScore.maximumScore}`)).toBeDefined();

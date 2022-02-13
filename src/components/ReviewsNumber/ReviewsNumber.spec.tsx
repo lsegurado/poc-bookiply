@@ -8,7 +8,7 @@ describe('Reviews number component', () => {
         el = render(<ReviewsNumber />);
     })
     it(`should match snapshot`, () => {
-        expect(el).toMatchSnapshot();
+        expect(el.container).toMatchSnapshot();
     })
     it(`should render the correct amount of reviews`, () => {
         expect(el.getByText(`${mockState().reviews.total} Reviews`)).toBeDefined();
