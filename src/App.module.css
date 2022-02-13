@@ -45,6 +45,7 @@
     min-width: 962px;
   }
 }
+
 @media (max-width: 1144.66px) {
   .header {
     overflow: hidden;

@@ -10,22 +10,19 @@ body {
 }
 
 :root {
-  --font-family: "SF Pro Display",
-    -apple-system,
-    BlinkMacSystemFont,
+  --font-family:
+    "SF Pro Display",
     "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
+    "Roboto",
     "Fira Sans",
     "Droid Sans",
     "Helvetica Neue",
     sans-serif;
   --primary-color: white;
-  --primary-background: #0276DB;
+  --primary-background: #0276db;
   --secondary-color: #173753;
   --secondary-background: white;
   --tertiary-color: #5b7186;
+
   font-family: var(--font-family);
 }
