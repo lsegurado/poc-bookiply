@@ -10,6 +10,7 @@ export const countTo = (from: number, to: number, segmentSize: number) => {
     const numbers = [from];
 
     while (from < to) {
+        // Facilitates operations between rational numbers
         from = Number(add(bignumber(from), bignumber(segmentSize)).valueOf());
         numbers.push(from);
     }
